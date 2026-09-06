@@ -1,0 +1,53 @@
+{
+  "name": "@usestring/lifelike",
+  "version": "0.1.0",
+  "description": "Life-like cellular automata in TypeScript \u2014 arbitrary B/S rules, RLE and plaintext pattern formats, and a canvas renderer with pan, zoom and cell-age themes.",
+  "type": "module",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "bun": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit -p tsconfig.demo.json",
+    "test": "bun test",
+    "demo": "bun build demo/demo.ts --outfile demo/demo.js --target browser && echo 'open demo/index.html'",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "game-of-life",
+    "conway",
+    "cellular-automata",
+    "life-like",
+    "rle",
+    "canvas",
+    "simulation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usestring/lifelike.git"
+  },
+  "homepage": "https://github.com/usestring/lifelike#readme",
+  "bugs": {
+    "url": "https://github.com/usestring/lifelike/issues"
+  },
+  "devDependencies": {
+    "@types/bun": "1.3.14",
+    "typescript": "5.9.3"
+  }
+}
